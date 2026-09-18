@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface LogoProps {
   className?: string;
@@ -31,24 +32,14 @@ export const Logo: React.FC<LogoProps> = ({
       href="/" 
       className={`inline-flex items-center gap-2 group select-none transition-opacity duration-150 hover:opacity-85 ${className}`}
     >
-      <div className={`relative flex items-center justify-center rounded-md bg-neutral-900 border border-neutral-700/80 p-1 group-hover:border-neutral-500 transition-colors ${iconSizes[size]}`}>
-        <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
-          <path 
-            d="M6 6L11 12L6 18" 
-            stroke="#ffffff" 
-            strokeWidth="2.2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-          />
-          <path 
-            d="M18 6L13 12L18 18" 
-            stroke="#a3a3a3" 
-            strokeWidth="2.2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-          />
-          <circle cx="12" cy="12" r="1.5" fill="#ffffff" />
-        </svg>
+      <div className={`relative shrink-0 overflow-hidden rounded-md border border-neutral-700/80 bg-[#242424] transition-colors group-hover:border-neutral-500 ${iconSizes[size]}`}>
+        <Image
+          src="/xedom-logo.png"
+          alt="Xedom logo"
+          fill
+          sizes="40px"
+          className="object-cover"
+        />
       </div>
       
       <div className="flex items-center gap-2">

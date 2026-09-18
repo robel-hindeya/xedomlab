@@ -50,20 +50,17 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
 
       <div className="mt-4 pt-4 border-t border-neutral-800 flex flex-col gap-2.5">
         <a
-          href="https://x.com/xedomlab"
+          href="https://x.com/robelhindeya"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-between px-3 py-2 rounded text-xs font-mono text-neutral-300 bg-neutral-900 border border-neutral-800 hover:text-white transition-colors"
-          aria-label="X @xedomlab"
+          aria-label="X @robelhindeya"
         >
           <div className="flex items-center gap-2">
             <XIcon className="w-4 h-4 text-white" />
-            <span className="font-semibold text-white">@xedomlab</span>
+            <span className="font-semibold text-white">@robelhindeya</span>
           </div>
           <span className="flex items-center gap-1.5 text-neutral-400">
-            <span className="px-1.5 py-0.5 rounded bg-black border border-neutral-800 text-[10px] text-neutral-300">
-              14.2k followers
-            </span>
             <ExternalLink className="w-3 h-3" />
           </span>
         </a>

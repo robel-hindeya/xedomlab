@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, MessageSquare, Send, Check, Terminal } from 'lucide-react';
 import { Button } from './Button';
-import { GithubIcon, XIcon } from './Icons';
+import { GithubIcon, XIcon, LinkedinIcon } from './Icons';
 
 interface JoinModalProps {
   isOpen: boolean;
@@ -54,7 +54,7 @@ export const JoinModal: React.FC<JoinModalProps> = ({ isOpen, onClose }) => {
         {/* Community Channels */}
         <div className="mt-5 space-y-2">
           <a
-            href="https://discord.com"
+            href="https://discord.com/channels/1515283832419520522/1515610695729938482"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between p-3 rounded-lg border border-neutral-800 bg-neutral-900/60 hover:bg-neutral-900 hover:border-neutral-700 transition-all group"
@@ -78,7 +78,7 @@ export const JoinModal: React.FC<JoinModalProps> = ({ isOpen, onClose }) => {
           </a>
 
           <a
-            href="https://telegram.org"
+            href="https://t.me/xedomlabs"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between p-3 rounded-lg border border-neutral-800 bg-neutral-900/60 hover:bg-neutral-900 hover:border-neutral-700 transition-all group"
@@ -102,7 +102,7 @@ export const JoinModal: React.FC<JoinModalProps> = ({ isOpen, onClose }) => {
           </a>
 
           <a
-            href="https://github.com"
+            href="https://github.com/robel-hindeya"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between p-3 rounded-lg border border-neutral-800 bg-neutral-900/60 hover:bg-neutral-900 hover:border-neutral-700 transition-all group"
@@ -121,12 +121,12 @@ export const JoinModal: React.FC<JoinModalProps> = ({ isOpen, onClose }) => {
               </div>
             </div>
             <span className="text-xs font-mono text-neutral-300 px-2 py-0.5 rounded bg-neutral-800 border border-neutral-700">
-              Star &rarr;
+              Follow &rarr;
             </span>
           </a>
 
           <a
-            href="https://x.com"
+            href="https://x.com/robelhindeya"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between p-3 rounded-lg border border-neutral-800 bg-neutral-900/60 hover:bg-neutral-900 hover:border-neutral-700 transition-all group"
@@ -146,6 +146,30 @@ export const JoinModal: React.FC<JoinModalProps> = ({ isOpen, onClose }) => {
             </div>
             <span className="text-xs font-mono text-neutral-300 px-2 py-0.5 rounded bg-neutral-800 border border-neutral-700">
               Follow &rarr;
+            </span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/robelhindeya/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between p-3 rounded-lg border border-neutral-800 bg-neutral-900/60 hover:bg-neutral-900 hover:border-neutral-700 transition-all group"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded bg-neutral-800 border border-neutral-700 flex items-center justify-center text-white">
+                <LinkedinIcon className="w-3.5 h-3.5" />
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-white">
+                  LinkedIn
+                </div>
+                <div className="text-xs text-neutral-400">
+                  Professional network and partnerships
+                </div>
+              </div>
+            </div>
+            <span className="text-xs font-mono text-neutral-300 px-2 py-0.5 rounded bg-neutral-800 border border-neutral-700">
+              Connect &rarr;
             </span>
           </a>
         </div>

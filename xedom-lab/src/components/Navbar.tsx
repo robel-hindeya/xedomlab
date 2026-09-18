@@ -71,17 +71,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
           {/* Right Actions */}
           <div className="flex items-center">
             <a
-              href="https://x.com/xedomlab"
+              href="https://x.com/robelhindeya"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-2 h-full px-4 border-l border-neutral-800 text-xs font-mono text-neutral-300 hover:text-white hover:bg-neutral-900/40 transition-colors group"
-              aria-label="Follow X @xedomlab"
+              aria-label="Follow X @robelhindeya"
             >
               <XIcon className="w-3.5 h-3.5 text-white" />
-              <span className="font-semibold text-white">@xedomlab</span>
-              <span className="px-1.5 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[11px] text-neutral-400 group-hover:text-neutral-300 transition-colors">
-                14.2k
-              </span>
+              <span className="font-semibold text-white">@robelhindeya</span>
             </a>
 
             {/* Mobile Toggle */}

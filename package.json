@@ -1,0 +1,40 @@
+{
+  "name": "xedom-monorepo",
+  "version": "1.0.0",
+  "description": "Xedom Lab Monorepo — Backend API, Admin Dashboard, and Public Frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,ADMIN,XEDOM-LAB\" -c \"cyan.bold,magenta.bold,green.bold\" \"npm run dev --prefix backend\" \"npm run dev --prefix admin\" \"npm run dev --prefix xedom-lab\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:admin": "npm run dev --prefix admin",
+    "dev:frontend": "npm run dev --prefix xedom-lab",
+    "dev:xedom": "npm run dev --prefix xedom-lab",
+    "build": "npm run build --prefix backend && npm run build --prefix admin && npm run build --prefix xedom-lab",
+    "build:backend": "npm run build --prefix backend",
+    "build:admin": "npm run build --prefix admin",
+    "build:frontend": "npm run build --prefix xedom-lab",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix admin && npm install --prefix xedom-lab",
+    "start": "node server.js",
+    "gateway": "node server.js"
+  },
+  "keywords": [
+    "xedom",
+    "xedom-lab",
+    "backend",
+    "admin",
+    "monorepo",
+    "typescript",
+    "nextjs",
+    "react",
+    "express"
+  ],
+  "author": "Robel Hindeya",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1"
+  }
+}

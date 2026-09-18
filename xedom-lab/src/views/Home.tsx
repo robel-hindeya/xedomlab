@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { Logo } from '../components/Logo';
 import { Button } from '../components/Button';
-import { GithubIcon, XIcon, DiscordIcon, TelegramIcon } from '../components/Icons';
+import { GithubIcon, XIcon, DiscordIcon, TelegramIcon, LinkedinIcon } from '../components/Icons';
 import { TrustedBy } from '../components/TrustedBy';
 import { MobileMenu } from '../components/MobileMenu';
 import { CommunityCard } from '../components/CommunityCard';
@@ -116,7 +116,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenJoinModal }) => {
             <div className="pt-6 border-t border-neutral-800/80 flex items-center justify-between text-xs font-mono text-neutral-400">
               <div className="flex items-center gap-2.5">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/robel-hindeya"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-md bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors"
@@ -125,7 +125,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenJoinModal }) => {
                   <GithubIcon className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://discord.com"
+                  href="https://discord.com/channels/1515283832419520522/1515610695729938482"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-md bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors"
@@ -134,7 +134,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenJoinModal }) => {
                   <DiscordIcon className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://telegram.org"
+                  href="https://t.me/xedomlabs"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-md bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors"
@@ -143,13 +143,22 @@ export const Home: React.FC<HomeProps> = ({ onOpenJoinModal }) => {
                   <TelegramIcon className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://x.com"
+                  href="https://x.com/robelhindeya"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-md bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors"
                   aria-label="X (Twitter)"
                 >
                   <XIcon className="w-3.5 h-3.5" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/robelhindeya/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-md bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <LinkedinIcon className="w-3.5 h-3.5" />
                 </a>
               </div>
 

@@ -1,4 +1,5 @@
 import { Code2, Hammer, Cpu, Terminal, Users, Sparkles, BookOpen, GitPullRequest, MessageSquare, Zap, Globe } from 'lucide-react';
+import { LinkedinIcon } from '../components/Icons';
 
 export const communityCategories = [
   {
@@ -84,7 +85,7 @@ export const communityChannels = [
   {
     name: 'Discord Server',
     handle: 'discord.gg/xedomlab',
-    url: 'https://discord.com',
+    url: 'https://discord.com/channels/1515283832419520522/1515610695729938482',
     description: 'Voice lounges, live coding rooms, help desks for each engineering track, and casual banter.',
     badge: 'Primary Hub',
     members: 'Active Now',
@@ -92,8 +93,8 @@ export const communityChannels = [
   },
   {
     name: 'Telegram Community',
-    handle: 't.me/xedomlab',
-    url: 'https://telegram.org',
+    handle: 't.me/xedomlabs',
+    url: 'https://t.me/xedomlabs',
     description: 'Fast mobile updates, technical discussions, event announcements, and regional chat groups.',
     badge: 'Fast Updates',
     members: 'Global Broadcast',
@@ -101,8 +102,8 @@ export const communityChannels = [
   },
   {
     name: 'GitHub Organization',
-    handle: 'github.com/xedom-lab',
-    url: 'https://github.com',
+    handle: 'github.com/robel-hindeya',
+    url: 'https://github.com/robel-hindeya',
     description: 'Explore community repositories, RFC specifications, project templates, and contribute code.',
     badge: 'Code & RFCs',
     members: 'Open Source',
@@ -110,11 +111,20 @@ export const communityChannels = [
   },
   {
     name: 'X (Twitter)',
-    handle: '@xedomlab',
-    url: 'https://x.com',
+    handle: '@robelhindeya',
+    url: 'https://x.com/robelhindeya',
     description: 'Highlighting community members, sharing engineering threads, and announcing hackathon winners.',
     badge: 'Social Feed',
     members: 'News & Demos',
     icon: Zap,
+  },
+  {
+    name: 'LinkedIn Network',
+    handle: 'linkedin.com/in/robelhindeya',
+    url: 'https://www.linkedin.com/in/robelhindeya/',
+    description: 'Professional networking, technical leadership posts, collaborations, and career growth.',
+    badge: 'Professional',
+    members: 'Connect',
+    icon: LinkedinIcon,
   },
 ];

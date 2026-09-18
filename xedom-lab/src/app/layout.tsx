@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     'Xedom Lab is a community for developers, programmers, and builders to learn, build real projects, share knowledge, and grow together.',
   icons: {
-    icon: '/logo.svg',
+    icon: '/xedom-logo.png',
   },
 };
 

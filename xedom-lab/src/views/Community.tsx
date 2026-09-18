@@ -450,7 +450,7 @@ export const Community: React.FC<CommunityProps> = ({ onOpenJoinModal }) => {
             <Button
               variant="outline"
               size="sm"
-              href="https://github.com"
+              href="https://github.com/robel-hindeya"
               external={true}
               leftIcon={<GithubIcon className="w-3.5 h-3.5" />}
               className="text-xs font-mono"
