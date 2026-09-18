@@ -1,0 +1,70 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { ExternalLink } from 'lucide-react';
+import { XIcon } from './Icons';
+
+interface NavLinkItem {
+  name: string;
+  path: string;
+}
+
+interface MobileMenuProps {
+  isOpen: boolean;
+  onClose: () => void;
+  links: NavLinkItem[];
+  onOpenJoinModal?: () => void;
+}
+
+export const MobileMenu: React.FC<MobileMenuProps> = ({
+  isOpen,
+  onClose,
+  links,
+  onOpenJoinModal: _onOpenJoinModal,
+}) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-x-0 top-14 z-30 bg-black/98 border-b border-neutral-800 px-4 pt-3 pb-6 lg:hidden shadow-2xl transition-all">
+      <div className="flex flex-col space-y-1">
+        {links.map((link) => (
+          <NavLink
+            key={link.name}
+            to={link.path}
+            end={link.path === '/'}
+            onClick={onClose}
+            className={({ isActive }) =>
+              `px-3 py-2.5 rounded font-mono text-xs uppercase tracking-wider transition-colors ${
+                isActive
+                  ? 'text-white bg-neutral-900 border border-neutral-800 font-semibold'
+                  : 'text-neutral-400 hover:text-white hover:bg-neutral-900/50'
+              }`
+            }
+          >
+            {link.name}
+          </NavLink>
+        ))}
+      </div>
+
+      <div className="mt-4 pt-4 border-t border-neutral-800 flex flex-col gap-2.5">
+        <a
+          href="https://x.com/xedomlab"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-between px-3 py-2 rounded text-xs font-mono text-neutral-300 bg-neutral-900 border border-neutral-800 hover:text-white transition-colors"
+          aria-label="X @xedomlab"
+        >
+          <div className="flex items-center gap-2">
+            <XIcon className="w-4 h-4 text-white" />
+            <span className="font-semibold text-white">@xedomlab</span>
+          </div>
+          <span className="flex items-center gap-1.5 text-neutral-400">
+            <span className="px-1.5 py-0.5 rounded bg-black border border-neutral-800 text-[10px] text-neutral-300">
+              14.2k followers
+            </span>
+            <ExternalLink className="w-3 h-3" />
+          </span>
+        </a>
+      </div>
+    </div>
+  );
+};
