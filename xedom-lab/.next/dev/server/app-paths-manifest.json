@@ -1,0 +1,8 @@
+{
+  "/ambassador/page": "app/ambassador/page.js",
+  "/community/page": "app/community/page.js",
+  "/events/page": "app/events/page.js",
+  "/news/page": "app/news/page.js",
+  "/page": "app/page.js",
+  "/products/page": "app/products/page.js"
+}
