@@ -1,0 +1,8 @@
+__turbopack_load_page_chunks__("/Events", [
+  "static/chunks/3q8ce-rht7vk4.js",
+  "static/chunks/17drfilx52ppm.js",
+  "static/chunks/1vdp-hl7zlrcj.js",
+  "static/chunks/0y25loex9u1-g.js",
+  "static/chunks/30v_5tvkf0vt2.js",
+  "static/chunks/turbopack-43_u2gq4_x5rv.js"
+])

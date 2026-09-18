@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Users, 
   MessageSquare, 
@@ -398,7 +400,7 @@ export const Community: React.FC<CommunityProps> = ({ onOpenJoinModal }) => {
               {/* CTAs */}
               <div className="mt-8 pt-6 border-t border-neutral-850 flex flex-wrap items-center gap-4">
                 <Link
-                  to="/ambassador#apply-form"
+                  href="/ambassador#apply-form"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs font-mono font-bold text-black bg-white hover:bg-neutral-200 transition-all shadow-md"
                 >
                   <span>Apply to Ambassador Program</span>
@@ -406,7 +408,7 @@ export const Community: React.FC<CommunityProps> = ({ onOpenJoinModal }) => {
                 </Link>
 
                 <Link
-                  to="/ambassador"
+                  href="/ambassador"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-xs font-mono text-neutral-300 bg-neutral-900 border border-neutral-800 hover:border-neutral-700 hover:text-white transition-all"
                 >
                   <span>Explore Program Perks & Tracks</span>

@@ -1,6 +1,6 @@
 import type { LucideIcon } from 'lucide-react';
 import { ArrowUpRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface CommunityCardProps {
   icon: LucideIcon;
@@ -40,7 +40,7 @@ export const CommunityCard: React.FC<CommunityCardProps> = ({
           </div>
 
           <Link
-            to={linkTo}
+            href={linkTo}
             className="w-7 h-7 rounded bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-neutral-600 transition-colors"
             aria-label={`Explore ${category}`}
           >

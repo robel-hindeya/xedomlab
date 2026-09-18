@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface LogoProps {
   className?: string;
@@ -28,7 +28,7 @@ export const Logo: React.FC<LogoProps> = ({
 
   return (
     <Link 
-      to="/" 
+      href="/" 
       className={`inline-flex items-center gap-2 group select-none transition-opacity duration-150 hover:opacity-85 ${className}`}
     >
       <div className={`relative flex items-center justify-center rounded-md bg-neutral-900 border border-neutral-700/80 p-1 group-hover:border-neutral-500 transition-colors ${iconSizes[size]}`}>

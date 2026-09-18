@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Award, 
   GraduationCap, 
@@ -981,7 +983,7 @@ export const Ambassador: React.FC = () => {
 
                 <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                   <Link
-                    to="/community"
+                    href="/community"
                     className="px-5 py-2.5 rounded-lg text-xs font-mono font-bold bg-white text-black hover:bg-neutral-200 transition-all"
                   >
                     Back to Community

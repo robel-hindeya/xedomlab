@@ -1,5 +1,8 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Logo } from './Logo';
 import { MobileMenu } from './MobileMenu';
@@ -12,6 +15,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,22 +50,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
 
           {/* Center / Desktop Navigation tabs */}
           <nav className="hidden lg:flex items-stretch flex-1">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.path}
-                end={link.path === '/'}
-                className={({ isActive }) =>
-                  `flex items-center px-4 xl:px-5 border-r border-neutral-800 font-mono text-xs uppercase tracking-wider transition-colors duration-150 ${
+            {navLinks.map((link) => {
+              const isActive = link.path === '/' ? pathname === '/' : pathname === link.path || pathname.startsWith(link.path + '/');
+              return (
+                <Link
+                  key={link.name}
+                  href={link.path}
+                  className={`flex items-center px-4 xl:px-5 border-r border-neutral-800 font-mono text-xs uppercase tracking-wider transition-colors duration-150 ${
                     isActive
                       ? 'text-white bg-neutral-900/60 font-semibold'
                       : 'text-neutral-400 hover:text-white hover:bg-neutral-900/40'
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
-            ))}
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Right Actions */}

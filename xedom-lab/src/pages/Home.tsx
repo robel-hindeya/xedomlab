@@ -1,5 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { 
   ArrowRight, 
   Terminal, 
@@ -30,6 +33,7 @@ interface HomeProps {
 
 export const Home: React.FC<HomeProps> = ({ onOpenJoinModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { name: 'README', path: '/' },
@@ -165,22 +169,22 @@ export const Home: React.FC<HomeProps> = ({ onOpenJoinModal }) => {
             <div className="h-14 flex items-stretch justify-between">
               {/* Monospace tab links */}
               <nav className="hidden sm:flex items-stretch flex-1 overflow-x-auto no-scrollbar">
-                {navLinks.map((link) => (
-                  <NavLink
-                    key={link.name}
-                    to={link.path}
-                    end={link.path === '/'}
-                    className={({ isActive }) =>
-                      `flex items-center px-4 xl:px-5 border-r border-neutral-800 font-mono text-xs uppercase tracking-wider transition-colors duration-150 whitespace-nowrap ${
+                {navLinks.map((link) => {
+                  const isActive = link.path === '/' ? pathname === '/' : pathname === link.path || pathname.startsWith(link.path + '/');
+                  return (
+                    <Link
+                      key={link.name}
+                      href={link.path}
+                      className={`flex items-center px-4 xl:px-5 border-r border-neutral-800 font-mono text-xs uppercase tracking-wider transition-colors duration-150 whitespace-nowrap ${
                         isActive
                           ? 'text-white bg-neutral-900/60 font-semibold'
                           : 'text-neutral-400 hover:text-white hover:bg-neutral-900/40'
-                      }`
-                    }
-                  >
-                    {link.name}
-                  </NavLink>
-                ))}
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  );
+                })}
               </nav>
 
               {/* Mobile brand indicator for small viewports */}
