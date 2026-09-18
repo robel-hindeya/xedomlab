@@ -1,6 +1,6 @@
 'use client';
 
-import { Community } from '../../pages/Community';
+import { Community } from '../../views/Community';
 import { useModal } from '../../context/ModalContext';
 
 export default function CommunityPage() {

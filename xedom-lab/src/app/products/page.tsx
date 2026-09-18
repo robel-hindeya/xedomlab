@@ -1,6 +1,6 @@
 'use client';
 
-import { Products } from '../../pages/Products';
+import { Products } from '../../views/Products';
 import { useModal } from '../../context/ModalContext';
 
 export default function ProductsPage() {

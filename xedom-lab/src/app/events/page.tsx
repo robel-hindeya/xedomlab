@@ -1,6 +1,6 @@
 'use client';
 
-import { Events } from '../../pages/Events';
+import { Events } from '../../views/Events';
 import { useModal } from '../../context/ModalContext';
 
 export default function EventsPage() {

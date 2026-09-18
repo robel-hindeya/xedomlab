@@ -1,7 +1,0 @@
-__turbopack_load_page_chunks__("/Ambassador", [
-  "static/chunks/3q8ce-rht7vk4.js",
-  "static/chunks/1vdp-hl7zlrcj.js",
-  "static/chunks/0-4cb8f7g92kc.js",
-  "static/chunks/0y25loex9u1-g.js",
-  "static/chunks/turbopack-0-ap782e3v5tr.js"
-])

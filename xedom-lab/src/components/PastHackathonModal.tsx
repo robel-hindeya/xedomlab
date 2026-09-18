@@ -49,11 +49,12 @@ export const PastHackathonModal: React.FC<PastHackathonModalProps> = ({
     };
   }, [hackathon, lightboxImage, onClose]);
 
-  // Reset tab and lightbox when hackathon changes
-  useEffect(() => {
+  const [prevHackathonId, setPrevHackathonId] = useState(hackathon?.id);
+  if (hackathon?.id !== prevHackathonId) {
+    setPrevHackathonId(hackathon?.id);
     setActiveTab('info');
     setLightboxImage(null);
-  }, [hackathon?.id]);
+  }
 
   if (!hackathon) return null;
 

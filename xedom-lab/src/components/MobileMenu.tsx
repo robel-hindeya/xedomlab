@@ -22,7 +22,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
   isOpen,
   onClose,
   links,
-  onOpenJoinModal: _onOpenJoinModal,
 }) => {
   const pathname = usePathname();
   if (!isOpen) return null;
@@ -31,7 +30,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
     <div className="fixed inset-x-0 top-14 z-30 bg-black/98 border-b border-neutral-800 px-4 pt-3 pb-6 lg:hidden shadow-2xl transition-all">
       <div className="flex flex-col space-y-1">
         {links.map((link) => {
-          const isActive = link.path === '/' ? pathname === '/' : pathname === link.path || pathname.startsWith(link.path + '/');
+          const isActive = link.path === '/' ? pathname === '/' : pathname === link.path || (pathname?.startsWith(link.path + '/') ?? false);
           return (
             <Link
               key={link.name}

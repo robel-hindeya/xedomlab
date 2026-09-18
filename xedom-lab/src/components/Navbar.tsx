@@ -51,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
           {/* Center / Desktop Navigation tabs */}
           <nav className="hidden lg:flex items-stretch flex-1">
             {navLinks.map((link) => {
-              const isActive = link.path === '/' ? pathname === '/' : pathname === link.path || pathname.startsWith(link.path + '/');
+              const isActive = link.path === '/' ? pathname === '/' : pathname === link.path || (pathname?.startsWith(link.path + '/') ?? false);
               return (
                 <Link
                   key={link.name}

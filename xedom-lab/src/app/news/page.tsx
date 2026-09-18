@@ -1,6 +1,6 @@
 'use client';
 
-import { News } from '../../pages/News';
+import { News } from '../../views/News';
 
 export default function NewsPage() {
   return <News />;

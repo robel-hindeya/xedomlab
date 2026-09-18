@@ -1,6 +1,6 @@
 'use client';
 
-import { Ambassador } from '../../pages/Ambassador';
+import { Ambassador } from '../../views/Ambassador';
 
 export default function AmbassadorPage() {
   return <Ambassador />;

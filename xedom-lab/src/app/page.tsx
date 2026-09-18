@@ -1,6 +1,6 @@
 'use client';
 
-import { Home } from '../pages/Home';
+import { Home } from '../views/Home';
 import { useModal } from '../context/ModalContext';
 
 export default function HomePage() {
